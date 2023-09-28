@@ -12,7 +12,7 @@ from data_utils import load_data
 
 if __name__ == '__main__':
 
-    Federated = True
+    FEDERATED = True
 
     # obtain experiment index
     exp_idx = int(sys.argv[1]) - 3 if int(sys.argv[1]) >= 3 else int(sys.argv[1])
@@ -42,7 +42,7 @@ if __name__ == '__main__':
     Y_train_1he = np.zeros((Y_train.size, Y.max() + 1))
     Y_train_1he[np.arange(Y_train.size), Y_train.reshape((-1,))] = 1
 
-    if Federated:
+    if FEDERATED:
         # obtain visually optimal gamma for current dataset
         gamma = {"xor":10, "rings":10,"iris":1000}
         X_args = {"gamma":gamma[dataset]}
@@ -65,7 +65,7 @@ if __name__ == '__main__':
 
     # transform test and train data
     if kernel == None:
-        if Federated:
+        if FEDERATED:
             U_prime = pca.eigenvectors_
             U = np.dot(P.T, U_prime)
         else:
@@ -74,7 +74,7 @@ if __name__ == '__main__':
         Z_test = U.T.dot(X_test.T).T
     else:
         U_prime = pca.eigenvectors_
-        if Federated:
+        if FEDERATED:
             K_train = pairwise_kernels(X_support, X_train, metric=pca.X_kernel, **pca.X_kernel_args)
             K_test = pairwise_kernels(X_support, X_test, metric=pca.X_kernel, **pca.X_kernel_args)
         else:
