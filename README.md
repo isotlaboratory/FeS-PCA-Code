@@ -8,8 +8,8 @@ Repository containing a Python script that can be imported to evaluate FeS-PCA[1
 `SPCA.py`: Script containing SPCA class for applying standard SPCA and its variants to centralized data.
 
 `visualize_toy_datasets.py`: Script which applies either FeS-PCA or SPCA to toy datasets for recreating Fig. 6 from [1] and Fig. 1-a, 1-d, 4-a, 4-d, 5-a, 5-d, from [2] (Note recreation of figures from [2] is not exact since precise parameters for kernel function and dataset generation were not given).
-    - First command line argument must be integer *x* in [0-5]: *x* mod 3 is dataset index in `['xor', 'rings', 'iris']` and ⌊*x*/2⌋ is method index in `['FeS-PCA/SPCA, FeSK-PCA/KSPCA]`.
-    - Choose between applying federated or unfederated algorithms by setting variable `FEDERATED` on line 15 to `True` or `Flase`, respectively. 
+ - First command line argument must be integer *x* in [0-5]: *x* mod 3 is dataset index in `['xor', 'rings', 'iris']` and ⌊*x*/2⌋ is method index in `['FeS-PCA/SPCA, FeSK-PCA/KSPCA]`.
+ - Choose between applying federated or unfederated algorithms by setting variable `FEDERATED` on line 15 to `True` or `Flase`, respectively. 
 
 `data_utils.py`: Script for generating toy datasets.
 
