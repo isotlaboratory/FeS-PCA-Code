@@ -13,6 +13,8 @@ Repository containing a Python script that can be imported to evaluate FeS-PCA[1
 
 `data_utils.py`: Script for generating toy datasets.
 
+### Bibliography:
+
 [1] W. Briguglio, W. A. Yousef, I. Traore, and M. Mamun, “Federated Supervised principal component analysis”, SUBMITTED to IEEE Transactions on Information Forensics and Security
 
 [2] E. Barshan, A. Ghodsi, Z. Azimifar, and M. Z. Jahromi, “Supervised principal component analysis: Visualization, classification and regression on subspaces and submanifolds”, Pattern Recognition, vol. 44, no. 7, pp.
